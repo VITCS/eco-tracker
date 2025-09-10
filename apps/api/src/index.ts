@@ -6,7 +6,9 @@ import app from './app';
 dotenv.config();
 
 const start = async () => {
-  await connectDB(env.MONGO_URI);
+  // Temporarily disable MongoDB connection for demo
+  // await connectDB(env.MONGO_URI);
+  console.log('Starting API without MongoDB (demo mode)');
   app.listen(env.PORT, () => {
     console.log(`API listening on http://localhost:${env.PORT}`);
   });
